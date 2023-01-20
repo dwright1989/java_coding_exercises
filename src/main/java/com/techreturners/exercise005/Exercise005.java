@@ -2,8 +2,9 @@ package com.techreturners.exercise005;
 
 public class Exercise005 {
 
+    final int ALPHABET_LETTER_COUNT = 26;
+
      public boolean isPangram(String input) {
-        boolean isPangram = false;
         input = input.toLowerCase();
         String alphabet = "";
          for(char i='a';i<='z';i++) {
@@ -12,10 +13,8 @@ public class Exercise005 {
             }
          }
 
-         if(alphabet.length()==26){
-             isPangram = true;
-         }
-        return isPangram;
+         return alphabet.length()==ALPHABET_LETTER_COUNT;
+
     }
 
 }
