@@ -18,16 +18,17 @@ public class Exercise001 {
     }
 
     public String reverse(String sentence) {
+        StringBuilder str = new StringBuilder(sentence);
         if(sentence.isEmpty())
             return sentence;
-        return reverse(sentence.substring(1)) + sentence.charAt(0);
+        return str.reverse().toString();
     }
 
 
     public int countLinuxUsers(List<User> users) {
         int linuxUserCount = 0;
         for(User user: users){
-            if(user.getType()=="Linux"){
+            if(user.getType().equals("Linux")){
                 linuxUserCount++;
             }
         }
